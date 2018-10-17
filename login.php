@@ -92,7 +92,7 @@ body {
             }
       ?>
       <label for="inputEmail" class="sr-only">Username</label>
-      <input type="text" id="inputEmail" class="form-control" placeholder="username" name="username" required autofocus>
+      <input type="text" id="inputEmail" class="form-control" placeholder="Username" name="username" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
       <input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Login">

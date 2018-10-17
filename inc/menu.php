@@ -31,21 +31,24 @@ header("Location: viewer.php");
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Billing
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="./admit-billing.php">Admitted</a>
-          <a class="dropdown-item" href="./appointment-billing.php">Appointments</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           View
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="./view-admitted.php">Admitted</a>
           <a class="dropdown-item" href="./view-appointments.php">Appointments</a>
+          <a class="dropdown-item" href="./view-room.php">Rooms</a>
+          <a class="dropdown-item" href="./view-doctors.php">Doctors</a>
           <a class="dropdown-item" href="./view-patients.php">Patients</a>
+          <a class="dropdown-item" href="./view-staff.php">Staff</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Billing
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="./admit-billing.php">Admitted</a>
+          <a class="dropdown-item" href="./appointment-billing.php">Appointments</a>
         </div>
       </li>
        <li class="nav-item">

@@ -34,11 +34,12 @@ if(isset($_GET['discharge'])){
     $discharge_date_query = "UPDATE admit SET discharge_date='$date' where id=$dadmit_id";//////
     $room = $details['room_number'];
     //echo $room;
+    $admit_date = $details['admit_date'];
     $room_free_query = "UPDATE room SET status=1 where number=$room";///////
-    $no_of_days = date_diff(date_create("2018-10-30"),date_create($date));
+    $no_of_days = date_diff(date_create($admit_date),date_create($date));
     //echo " -- ".$no_of_days->format("%a")."  --  ";
     $room_rent = mysqli_fetch_array(mysqli_query($con,"SELECT * FROM room where number=$room"));
-    $room_rent_amt = $room_rent['rent'] * $no_of_days->format("%a");
+    $room_rent_amt = $room_rent['rent'] * ($no_of_days->format("%a")+1);
     //echo $room_rent_amt;
     $add_room_charges = "UPDATE billing SET room_charges=$room_rent_amt where admit_id=$dadmit_id";////////
     $discharge_status = "UPDATE admit SET status = 0 where id=$dadmit_id";/////// 0 means discharged, 1 means admitted

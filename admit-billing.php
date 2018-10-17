@@ -109,7 +109,13 @@ if(isset($_GET['markPaid'])){
             $advance = $data['advance'];
             $total = $data['total'];
             $due = $total - $advance;
-            $other_charges = $total - $room_charges;
+            if(isset($total)){
+                $other_charges = $total - $room_charges;
+                $due = $total - $advance;
+            }else{
+                $other_charges = 0;
+                $due = $room_charges - $advance;
+            }
             $status = $data['status'];
             $pquery = mysqli_query($con,"select name from patient where id=$patient_id");
 //            echo $pquery;
